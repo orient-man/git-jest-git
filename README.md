@@ -76,4 +76,13 @@ Gdy chcemy wyczyścić (porzucić nieskomitowane zmiany)
 - *checkout* (Where do you want to go today?)
 - *push, pull* (podziel się)
 
+## Bibliografia
+
+- biblia [Pro Git](http://git-scm.com/book)
+- [ściąga](http://ndpsoftware.com/git-cheatsheet.html)
+- [PoshGit: PowerShell environment for Git](https://github.com/dahlbyk/posh-git)
+- [SourceTree](http://www.sourcetreeapp.com/)
+- [wstęp do git-svn](http://www.benedykt.net/2013/03/22/kodzic-po-ludzku-czyli-jak-sie-pozbyc-svn-a/)
+- [więcej...](https://pinboard.in/u:orientman/t:Git/)
+
 TBC...
