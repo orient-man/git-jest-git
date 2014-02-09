@@ -42,7 +42,7 @@ Dwie strategia: merge lub rebase (git-svn). Branch to *tylko* etykieta. Scalenie
 
 ### Typowy workflow: Isolate -> Work <-> Update -> Share 
 
-- wydziel sobie miejsca do pracy w postaci gałęzi (branch)
+- wydziel sobie miejsce do pracy w postaci gałęzi (branch)
 - pracuj (add, commit)
 - zaktualizuj i przetestuj (update, merge, rebase)
 - podziel się (merge -> test -> push)
