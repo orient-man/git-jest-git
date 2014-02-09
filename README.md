@@ -38,7 +38,7 @@ Format ID = SHA1(content, autor, data, log, ID poprzedniego commita). Jak to wyg
 	// fast-forward merge
 	> git merge feature
 
-Dwie strategia: merge lub rebase (git-svn). Branch to *tylko* etykieta. Scalenie zmian to najczęściej jedynie przesunięcie tej etykiety!
+Dwie strategie: merge lub rebase (git-svn). Branch to *tylko* etykieta. Scalenie zmian to najczęściej jedynie przesunięcie tej etykiety!
 
 ### Typowy workflow: Isolate -> Work <-> Update -> Share 
 
