@@ -2,7 +2,7 @@
 
 ## Wstęp
 
-- git is hard
+- git łatwym nie jest
 - ale warto!
 
 Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w środku:
