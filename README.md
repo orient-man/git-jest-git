@@ -7,9 +7,11 @@
 
 Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w środku:
 
-- normalnie jest lamka ostrzegawcza: nie używać!
+- normalnie w takim przypadku pojawia się lamka ostrzegawcza: nie używać!
 - ale bebechy git-a są tak dobre... i proste, że nie jest to problemem
 - w tym przypadku UI to nie wszystko i odrobina nauki popłaca
+
+[Statystyki użycia systemów zarządzania źródłami (*nie* tylko open-source)](http://www.slideshare.net/IanSkerrett/eclipse-survey-2013-report-final/14)
 
 ## DEMO
 
