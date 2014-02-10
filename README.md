@@ -14,7 +14,7 @@ Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w 
 
 [Statystyki użycia systemów zarządzania źródłami (*nie* tylko open-source)](http://www.slideshare.net/IanSkerrett/eclipse-survey-2013-report-final/14)
 
-## DEMO
+## DEMO 1
 
 ### Podstawy
 
@@ -41,34 +41,68 @@ Format ID = SHA1(content, autor, data, log, ID poprzedniego commita). Jak to wyg
 	// fast-forward merge
 	> git merge feature
 
-Dwie strategie: merge lub rebase (git-svn). Branch to *tylko* etykieta. Scalenie zmian to najczęściej jedynie przesunięcie tej etykiety!
+Branch to *tylko* etykieta. Scalenie zmian to najczęściej jedynie przesunięcie tej etykiety! Proste i bezpieczne.
 
-### Typowy workflow: Isolate -> Work <-> Update -> Share 
+To był 1 z 2 możliwych wariantów scalania. Drugi to *rebase* pozwalający wyprostować historię:
+
+	> git checkout feature2
+	... add, commit
+	> git checkout master
+	... add, commit
+	> git checkout feature2
+	> git rebase master
+	// i testujemy czy działa
+	> git checkout master
+	// już tylko fast-forward 
+	> git merge --ff-only feature
+
+Wybór jest filozoficzny... (patrz przykładowe repo EventStore). Chyba, że używamy git-svn - wtedy nie mamy wyboru i trzeba robić rebase.
+ 
+## Typowy workflow: Isolate -> Work <-> Update -> Share 
 
 - wydziel sobie miejsce do pracy w postaci gałęzi (branch)
 - pracuj (add, commit)
 - zaktualizuj i przetestuj (update, merge, rebase)
 - podziel się (merge -> test -> push)
 
+## DEMO 2
+
+## Przegląd podstawowych operacji
+
 ### Jak się poruszać
 
+	> git checkout feature
+	> git checkout master
+	> git checkout abcd...
 	> git checkout HEAD^
 
 "HEAD^" to przykład referencji. Inne: ID, rodzice (I^1), tag, branch, ^n...
 
 ![http://geek-and-poke.com/geekandpoke/2013/11/7/the-ultimative-geek-speak-quiz](http://static.squarespace.com/static/518f5d62e4b075248d6a3f90/t/527c1880e4b073edc70a9dd6/1383864462509/geek-speak.jpg?format=500w)
 
+
 ### Jak się wycofać
 
 Gdy chcemy wyczyścić (porzucić nieskomitowane zmiany)
 
+	// wycofanie ostatnie commita "undo"
+	> git reset --soft HEAD^
+	// wycofanie i porzucenie zmian
 	> git reset --hard HEAD^
+	// usunięcie nie śledzonych plików (nie dodanych do repo)
 	> git clean
+
+### Szybkie poprawki
+
+...
 
 ### Scalanie
 
+...
+
 ### Staging
 
+...
 
 ### Podsumowanie: podstawowe operacje
 
