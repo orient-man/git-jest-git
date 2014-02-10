@@ -9,7 +9,7 @@ Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w 
 
 - [UX mogłoby być lepsze](http://stevelosh.com/blog/2013/04/git-koans/)
 - normalnie w takim przypadku pojawia się lamka ostrzegawcza: nie używać!
-- ale bebechy git-a są tak dobre... i proste, że nie jest to problemem
+- ale bebechy git-a są tak dobre... i [proste](http://johannesbrodwall.com/2013/10/09/having-fun-with-git/), że nie jest to problemem
 - w tym przypadku UI to nie wszystko i odrobina nauki popłaca
 
 [Statystyki użycia systemów zarządzania źródłami (*nie* tylko open-source)](http://www.slideshare.net/IanSkerrett/eclipse-survey-2013-report-final/14)
