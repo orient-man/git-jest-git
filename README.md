@@ -106,6 +106,9 @@ Co śledzi co:
 	> git branch --set-upstream-to origin/from-alice-with-love
 	...
 
+Uwagi:
+ - ID (SHA1) nie tylko unikalnie identyfikuje commit, ale całą jego historię - stąd możliwy jest szybki protokół sieciowy
+ 
 ## Przegląd podstawowych operacji
 
 ### Jak się poruszać
@@ -114,6 +117,8 @@ Co śledzi co:
 	> git checkout master
 	> git checkout sha1
 	> git checkout HEAD^
+	> git checkout -- path
+	> git checkout branch -- path
 
 "HEAD^" to przykład referencji. Inne: ID, rodzice (I^1), tag, branch, ^n...
 
@@ -129,19 +134,42 @@ Gdy chcemy wyczyścić (porzucić nieskomitowane zmiany)
 	> git reset --hard HEAD^
 	// usunięcie nie śledzonych plików (nie dodanych do repo)
 	> git clean
+	// popraw ostatni commit
+	> git commit --amend
 
 ### Staging
 
+Wybieramy niczym wybredny klient w restauracji:
+
 	> vim foo
-	// poprawiamy literówkę
+	// poprawiamy literówkę i coś jeszcze
 	> vim bar
-	> git add foo
 	> git add -p bar
+	> git commit -m "Literówka"
+	> git add -A
 	> git commit
 
-### Szybkie poprawki
+Usuwanie z indeksu:
 
+	> git reset HEAD -- path-to-file
 
+### Stashing
+
+Nie chce mi się teraz myśleć... weź gdzieś to zapisz:
+
+	// --include-untracked
+	> git stash -u
+
+Chcę przetestować to co zamierzam skomitować:
+
+	// --keep-index
+	> git stash -k
+
+### Poprawianie historii
+
+Commit jest niemodyfikowalny, zatem historii nie da się poprawić... ale można napisać ją od nowa:
+
+	> git rebase -i
 
 ### Podsumowanie: podstawowe operacje
 
