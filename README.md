@@ -19,6 +19,7 @@ Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w 
 ### Podstawy
 
 	// tworzymy nowe repozytorium
+	> mkdir test
     > git init
     // zawartość repo (głównie puste katalogi)
     > tree /F .git
@@ -67,19 +68,56 @@ Wybór jest filozoficzny... (patrz przykładowe repo EventStore). Chyba, że uż
 
 ## DEMO 2
 
+Praca ze "zdalnymi" repozytoriami:
+
+	> git clone --bare test/ remote/
+	> git clone remote/ alice/
+	> git clone remote/ bob/
+	> cd alice
+	> git config --local user.name alice
+	.. add, commit foo
+	> git push
+	> cd ../bob/
+	> git config --local user.name bob
+	.. add, commit foo
+	> git fetch
+	> git pull
+	// BUM! konflikt
+	> git mergetool
+	> git commit
+	> git push
+	> cd ../alice/
+	> git pull
+
+Co śledzi co:
+
+	> git branch -vv
+
+"Rex, podaj gałąź":
+
+	> git checkout -b from-alice-with-love
+	.. add, commit
+	> git push --set-upstream origin from-alice-with-love
+	> cd ../bob/
+	> git fetch
+	> git checkout origin/from-alice-with-love
+	// jeśli chcemy commitować to powinniśmy zrobić lokalną gałąź
+	> git branch from-bob-to-alice
+	> git branch --set-upstream-to origin/from-alice-with-love
+	...
+
 ## Przegląd podstawowych operacji
 
 ### Jak się poruszać
 
 	> git checkout feature
 	> git checkout master
-	> git checkout abcd...
+	> git checkout sha1
 	> git checkout HEAD^
 
 "HEAD^" to przykład referencji. Inne: ID, rodzice (I^1), tag, branch, ^n...
 
 ![http://geek-and-poke.com/geekandpoke/2013/11/7/the-ultimative-geek-speak-quiz](http://static.squarespace.com/static/518f5d62e4b075248d6a3f90/t/527c1880e4b073edc70a9dd6/1383864462509/geek-speak.jpg?format=500w)
-
 
 ### Jak się wycofać
 
@@ -92,17 +130,18 @@ Gdy chcemy wyczyścić (porzucić nieskomitowane zmiany)
 	// usunięcie nie śledzonych plików (nie dodanych do repo)
 	> git clean
 
-### Szybkie poprawki
-
-...
-
-### Scalanie
-
-...
-
 ### Staging
 
-...
+	> vim foo
+	// poprawiamy literówkę
+	> vim bar
+	> git add foo
+	> git add -p bar
+	> git commit
+
+### Szybkie poprawki
+
+
 
 ### Podsumowanie: podstawowe operacje
 
