@@ -7,7 +7,7 @@
 
 Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w środku:
 
-- [UX mogłoby być lepsze](http://stevelosh.com/blog/2013/04/git-koans/)
+- [UX mogłoby być lepsze](http://stevelosh.com/blog/2013/04/git-koans/), ponadto generalnie w DVCS te same komendy co w SVN/CVS znaczą co innego
 - normalnie w takim przypadku pojawia się lamka ostrzegawcza: nie używać!
 - ale bebechy git-a są tak dobre... i [proste](http://johannesbrodwall.com/2013/10/09/having-fun-with-git/), że nie jest to problemem
 - w tym przypadku UI to nie wszystko i odrobina nauki popłaca
