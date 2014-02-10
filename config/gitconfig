@@ -1,0 +1,46 @@
+[core]
+	autocrlf = true
+    excludesfile = C:\\Users\\malin\\.gitignore_global
+    #editor = vi
+    editor = "C:/Chocolatey/bin/vim852.sh"
+    # ucinanie wierszy nie działa w PS:
+    pager = less -r
+[user]
+#	name = user
+#	email = user@domain.com
+[help]
+    format = html
+[diff]
+    guitool = winmerge
+    renames = copies
+[difftool "winmerge"]
+    path = \"c:/Program Files (x86)/WinMerge/WinMergeU.exe\"
+    cmd = \"c:/Program Files (x86)/WinMerge/WinMergeU.exe\" -e -u -x -wl -wr -dl \"base\" -dr \"mine\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = vsdiffmerge
+[mergetool "winmerge"]
+    cmd = \"c:/Program Files (x86)/WinMerge/WinMergeU.exe\" -e "$MERGED"
+    trustExitCode = false
+[mergetool "vsdiffmerge"]
+    cmd = '"C:/Program Files (x86)/Microsoft Visual Studio 12.0/Common7/IDE/vsdiffmerge.exe"' "$REMOTE" "$LOCAL" "$BASE" "$MERGED" //m
+    trustexistcode = true
+[mergetool "SemanticMerge"]
+    path = c:/Users/malin/AppData/Local/PlasticSCM4/semanticmerge/semanticmergetool.exe
+    trustExitCode = false
+    cmd = \"c:/Users/malin/AppData/Local/PlasticSCM4/semanticmerge/semanticmergetool.exe\" -b=\"$BASE\" -d=\"$LOCAL\" -s=\"$REMOTE\" -r=\"$MERGED\" -l=csharp -emt=\"mergetool.exe -b=\"\"@basefile\"\" -bn=\"\"@basesymbolic\"\" -s=\"\"@sourcefile\"\" -sn=\"\"@sourcesymbolic\"\" -d=\"\"@destinationfile\"\" -dn=\"\"@destinationsymbolic\"\" -r=\"\"@output\"\" -t=\"\"@filetype\"\" -i=\"\"@comparationmethod\"\" -e=\"\"@fileencoding\"\"\" -edt=\"mergetool.exe  -s=\"\"@sourcefile\"\" -sn=\"\"@sourcesymbolic\"\" -d=\"\"@destinationfile\"\" -dn=\"\"@destinationsymbolic\"\" -t=\"\"@filetype\"\" -i=\"\"@comparationmethod\"\" -e=\"\"@fileencoding\"\"\"
+[mergetool]
+    keepBackup = false
+[alias]
+    co = checkout
+    st = status -sb
+    ds = diff --stat
+    di = diff --staged
+    amend = commit --amend -C HEAD
+    undo = reset --soft HEAD^
+    new = log ..master --reverse
+    lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    forward = merge --ff-only
+    # http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"

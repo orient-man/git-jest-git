@@ -1,0 +1,33 @@
+[core]
+    # za http://wiki.wesnoth.org/GIT-SVN
+    autocrlf = false
+    eol = lf
+    savecrlf = true
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+    hideDotFiles = dotGitOnly
+    whitespace = nowarn
+[svn-remote "svn"]
+    rewriteRoot = svn://piatka.pl:3691/trunk/piatka/pincasso.NET/trunk/pincasso.NET
+    url = svn://192.168.20.105:3691/trunk/piatka/pincasso.NET/trunk/pincasso.NET
+    #url = svn://piatka.pl:3691/trunk/piatka/pincasso.NET/trunk/pincasso.NET
+    fetch = :refs/remotes/git-svn
+[gui]
+    wmstate = normal
+    geometry = 887x427+280+182 171 192
+[submodule "src/KomponentyStandardowe.Data"]
+    url = c:/projekty/Pincasso.NET-externals/KomponentyStandardowe.Data
+[submodule "src/KomponentyStandardowe.Data.Test"]
+    url = c:/projekty/Pincasso.NET-externals/KomponentyStandardowe.Data.Test
+[submodule "tools"]
+    url = c:/projekty/Pincasso.NET-externals/tools
+[apply]
+    whitespace = nowarn
+
+[branch "master"]
+	remote = .
+	merge = refs/remotes/git-svn
