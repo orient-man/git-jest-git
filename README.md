@@ -7,6 +7,7 @@
 
 Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w środku:
 
+- [UX mogłoby być lepsze](http://stevelosh.com/blog/2013/04/git-koans/)
 - normalnie w takim przypadku pojawia się lamka ostrzegawcza: nie używać!
 - ale bebechy git-a są tak dobre... i proste, że nie jest to problemem
 - w tym przypadku UI to nie wszystko i odrobina nauki popłaca
