@@ -89,6 +89,11 @@ Praca ze "zdalnymi" repozytoriami:
 	> cd ../alice/
 	> git pull
 
+Generalnie konflikt to rzadko występujący zwierz, bo git ma dobry algorytm trójstronny (zna wspólnego rodzica). Merge(tool):
+
+ - domyślnie TortoiseMerge
+ - ja robię to ręcznie edytorem
+
 Co śledzi co:
 
 	> git branch -vv
@@ -107,6 +112,7 @@ Co śledzi co:
 	...
 
 Uwagi:
+
  - ID (SHA1) nie tylko unikalnie identyfikuje commit, ale całą jego historię - stąd możliwy jest szybki protokół sieciowy
  
 ## Przegląd podstawowych operacji
@@ -155,7 +161,7 @@ Usuwanie z indeksu:
 
 ### Stashing
 
-Nie chce mi się teraz myśleć... weź gdzieś to zapisz:
+Muszę szybko zmienić kontekst, a nie chce mi się teraz myśleć... weź gdzieś to zapisz:
 
 	// --include-untracked
 	> git stash -u
@@ -170,6 +176,8 @@ Chcę przetestować to co zamierzam skomitować:
 Commit jest niemodyfikowalny, zatem historii nie da się poprawić... ale można napisać ją od nowa:
 
 	> git rebase -i
+
+Zmiany w SCM powinny opisywać historię naszego projektu. I dlatego trzeba tę historię poprawiać :). Pracuję cały dzień i commituję chaotycznie - na koniec dnia prostuję i wysyłam do centralnego repo.
 
 ### Podsumowanie: podstawowe operacje
 
