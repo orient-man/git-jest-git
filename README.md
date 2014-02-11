@@ -188,6 +188,8 @@ Zmiany w SCM powinny opisywać historię naszego projektu. I dlatego trzeba tę 
 - *checkout* (Where do you want to go today?)
 - *push, pull* (podziel się)
 
+![https://twitter.com/flowchainsensei/status/408167162344648704/photo/1](https://dl.dropboxusercontent.com/s/6c54iupju89pch3/wisdom.jpg?dl=1&token_hash=AAGZj1n_fSXzUc_o3jFuKrSpRayfuiY0YxDn1DDYVpspxg)
+
 ## Bibliografia
 
 - biblia [Pro Git](http://git-scm.com/book)
