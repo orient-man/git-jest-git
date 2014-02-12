@@ -190,6 +190,51 @@ Zmiany w SCM powinny opisywać historię naszego projektu. I dlatego trzeba tę 
 
 ![https://twitter.com/flowchainsensei/status/408167162344648704/photo/1](./wisdom.jpg)
 
+## Git vs. Subversion
+
+Git czyli "luz w...":
+
+- komitujemy ile chcecemy
+- pracujemy nad czym chcemy (gałęzie) - a nie "mam rozgrzebane, więc chwilowo nie mogę..."
+- możemy trzymać w repozytorium wszystko, także eksperymenty - a może się przydadzą?
+- commit jest święty i historia jest święta... ale można napisać ją od nowa
+- i ta historia może składać się w sensowną opowieść o naszym kodzie (skąd się wzięła dana zmiana, jaki ciąg zmian składa się na daną funkcjonalność etc.)
+- pełna kontrola nad synchronizacją z innymi
+ - krok 1: "u mnie działa" -> commit
+ - krok 2: sync -> nie działa? -> poprawki -> commit
+ - krok 3: podziel się
+- każdy ma pełną kopię historii (backup)
+- można pracować całkowicie lokalnie (bez sieci)
+- centralny f**kup na nie blokuje (np.: ktoś coś wrzucił co się nie kompiluje i poszedł do domu)
+
+SVN to "pain in the...":
+
+- w svn commit jest operację **groźną**:
+ - wymaga kontaktu z serwerem
+ - wymaga synchronizacji z innymi
+ - ta synchronizacja może nam nieodwracalanie namieszać w kopii roboczej
+- w efekcie komitujemy rzadziej niż powinniśmy
+- a przy trudnych zmianach w ogóle przez dłuższy czas (godziny, dni)
+- czyli nie korzystamy z svn :)
+- teoretycznie można by sobie z tym poradzić i temu służą gałęzie, ale...
+- gałęzie w svn są... **ciężkie** i trudne w obsłudze
+
+Ponadto:
+
+- git jest bardzo szybki
+- git otwiera nas na nowe sposoby pracy
+ - svn z perspektywy git nie różni się znacząco od zwykłego backupu
+- git jest git
+
+## Bonusy
+
+- budowa repo
+- no renames
+- bisect
+- autor vs. komitujący
+
+...
+
 ## Bibliografia
 
 - biblia [Pro Git](http://git-scm.com/book)
@@ -197,6 +242,7 @@ Zmiany w SCM powinny opisywać historię naszego projektu. I dlatego trzeba tę 
 - [PoshGit: PowerShell environment for Git](https://github.com/dahlbyk/posh-git)
 - [SourceTree](http://www.sourcetreeapp.com/)
 - [wstęp do git-svn](http://www.benedykt.net/2013/03/22/kodzic-po-ludzku-czyli-jak-sie-pozbyc-svn-a/)
+- [przykład praktyczny p.t. "ok, znam podstawowe operacje i co dalej?"](http://nvie.com/posts/a-successful-git-branching-model/)
 - [więcej...](https://pinboard.in/u:orientman/t:Git/)
 
 TBC...
