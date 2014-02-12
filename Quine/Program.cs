@@ -25,7 +25,7 @@ namespace Quine
             var quineDirTreeFile = ReadObject(quineDirHash);
             Log("Quine directory tree", Encoding.UTF8.GetString(quineDirTreeFile) + "\n");
             var programHash = GetHashFromDirectoryTree(quineDirTreeFile, "Program.cs");
-            Log("Program hash", quineDirHash);
+            Log("Program hash", programHash);
             Log("Program blob", Encoding.UTF8.GetString(ReadObject(programHash)));
         }
 
