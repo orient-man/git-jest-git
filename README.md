@@ -9,7 +9,7 @@ Aby poznać/używać gita trzeba wiedzieć chociaż trochę o tym jak działa w 
 
 - [UX mogłoby być lepsze](http://stevelosh.com/blog/2013/04/git-koans/), ponadto generalnie w DVCS te same komendy co w SVN/CVS znaczą co innego
 - normalnie w takim przypadku pojawia się lamka ostrzegawcza: nie używać!
-- ale bebechy git-a są tak dobre... i [proste](http://johannesbrodwall.com/2013/10/09/having-fun-with-git/), że nie jest to problemem
+- ale bebechy git-a są tak dobre... i [proste](./Quine/Program.cs), że nie jest to problemem
 - w tym przypadku UI to nie wszystko i odrobina nauki popłaca
 
 [Statystyki użycia systemów zarządzania źródłami (*nie* tylko open-source)](http://www.slideshare.net/IanSkerrett/eclipse-survey-2013-report-final/14)
@@ -128,7 +128,7 @@ Uwagi:
 
 "HEAD^" to przykład referencji. Inne: ID, rodzice (I^1), tag, branch, ^n...
 
-![http://geek-and-poke.com/geekandpoke/2013/11/7/the-ultimative-geek-speak-quiz](http://static.squarespace.com/static/518f5d62e4b075248d6a3f90/t/527c1880e4b073edc70a9dd6/1383864462509/geek-speak.jpg?format=500w)
+![http://geek-and-poke.com/geekandpoke/2013/11/7/the-ultimative-geek-speak-quiz](./geek-speak.jpg)
 
 ### Jak się wycofać
 
@@ -188,7 +188,7 @@ Zmiany w SCM powinny opisywać historię naszego projektu. I dlatego trzeba tę 
 - *checkout* (Where do you want to go today?)
 - *push, pull* (podziel się)
 
-![https://twitter.com/flowchainsensei/status/408167162344648704/photo/1](https://dl.dropboxusercontent.com/s/6c54iupju89pch3/wisdom.jpg?dl=1&token_hash=AAGZj1n_fSXzUc_o3jFuKrSpRayfuiY0YxDn1DDYVpspxg)
+![https://twitter.com/flowchainsensei/status/408167162344648704/photo/1](./wisdom.jpg)
 
 ## Bibliografia
 
