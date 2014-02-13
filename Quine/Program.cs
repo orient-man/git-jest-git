@@ -6,6 +6,10 @@ using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
 
 namespace Quine
 {
+    /// <remarks>
+    /// Działa tylko do momentu gdy git nie zacznie optymalizować zużycia dysku (pack)
+    /// http://git-scm.com/book/en/Git-Internals-Packfiles
+    /// </remarks>
     class Program
     {
         private const string Repo = @"../../../.git/";
