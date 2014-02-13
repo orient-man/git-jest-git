@@ -243,6 +243,7 @@ Ponadto:
 - [SourceTree](http://www.sourcetreeapp.com/)
 - [wstęp do git-svn](http://www.benedykt.net/2013/03/22/kodzic-po-ludzku-czyli-jak-sie-pozbyc-svn-a/)
 - [przykład praktyczny p.t. "ok, znam podstawowe operacje i co dalej?"](http://nvie.com/posts/a-successful-git-branching-model/)
+- repozytoria w chmurze: [BitBucket](https://bitbucket.org/) i [GitHub](https://github.com/)
 - [więcej...](https://pinboard.in/u:orientman/t:Git/)
 
 TBC...
